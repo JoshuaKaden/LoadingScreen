@@ -15,12 +15,11 @@ class ViewController: UIViewController {
         
         
         // Setup
-        let label = UILabel(frame: CGRect())
+        let label = UILabel()
         self.view.addSubview(label)
         
         label.alpha = 0
-        label.adjustsFontSizeToFitWidth = true
-        label.font = UIFont.systemFontOfSize(100)
+        label.font = UIFont.systemFontOfSize(50)
         label.text = "Loading..."
         
         label.sizeToFit()
@@ -28,7 +27,7 @@ class ViewController: UIViewController {
         
         
         // Draw background
-        self.view.backgroundColor = UIColor.lightGrayColor()
+        self.view.backgroundColor = UIColor.cyanColor()
         
         
         // Fade in, and grow
