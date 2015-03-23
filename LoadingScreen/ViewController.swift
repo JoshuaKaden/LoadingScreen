@@ -13,19 +13,25 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.view.backgroundColor = UIColor.lightGrayColor()
         
+        // Setup
         let label = UILabel(frame: CGRect())
+        self.view.addSubview(label)
+        
         label.alpha = 0
         label.adjustsFontSizeToFitWidth = true
         label.font = UIFont.systemFontOfSize(100)
         label.text = "Loading..."
         
-        self.view.addSubview(label)
-        
         label.sizeToFit()
         label.center = self.view.center
         
+        
+        // Draw background
+        self.view.backgroundColor = UIColor.lightGrayColor()
+        
+        
+        // Fade in, and grow
         label.transform = CGAffineTransformScale(label.transform, 0.25, 0.25)
         
         UIView.animateWithDuration(3, animations: {
